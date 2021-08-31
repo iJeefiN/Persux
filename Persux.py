@@ -9,7 +9,7 @@ from data.menu import *
 try:
     while True:
         os.system('clear')
-        if usr == 1:
+        if usr == False:
             print(f'{cy}~Lursy: {vd}Olá...')
             sleep(1)
             print('        É sua primeira vez por aqui?')
@@ -32,7 +32,7 @@ try:
 {ve}┗━━━━━━━━━━━━━━━━━┛
 ''')
         menu = int(input(f'{am}//: {br}'))
-        if usr == 1 and menu < 4:
+        if usr == False:
             print(f'{cy}~Lursy: {vd}Boa escolha!')
             sleep(1)
             usr = True
