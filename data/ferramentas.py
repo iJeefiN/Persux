@@ -1,4 +1,5 @@
 import os
+from time import sleep
 
 
 ve = '\033[1;31m'  # Vermelho
