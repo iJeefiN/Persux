@@ -1,5 +1,6 @@
 from data.install import *
-nms = 2
+os.chdir('/data/data/com.termux/files/usr/etc/')
+usr = os.path.exists('.usuario')
 install()
 from time import sleep
 from data.menu import *
@@ -8,7 +9,7 @@ from data.menu import *
 try:
     while True:
         os.system('clear')
-        if nms == 1:
+        if usr == 1:
             print(f'{cy}~Lursy: {vd}Olá...')
             sleep(1)
             print('        É sua primeira vez por aqui?')
@@ -31,10 +32,10 @@ try:
 {ve}┗━━━━━━━━━━━━━━━━━┛
 ''')
         menu = int(input(f'{am}//: {br}'))
-        if nms == 1 and menu < 4:
+        if usr == 1 and menu < 4:
             print(f'{cy}~Lursy: {vd}Boa escolha!')
             sleep(1)
-            nms = 3
+            usr = True
         if menu == 1:
             from data.letra import letra
             letra()
