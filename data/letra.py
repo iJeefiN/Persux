@@ -16,7 +16,6 @@ def letra():
         print(coresf)
         print(menu_cores)
         cores = str(input(f'\n{am}//: {br}'))
-        os.chdir('/data/data/com.termux/files/usr/etc')
         os.system('rm -rf bash.bashrc')
         if cores == '1':
             scor = cor_letra.replace(':cor', '31')
@@ -32,6 +31,8 @@ def letra():
             scor = cor_letra.replace(':cor', '34')
         elif cores == '7':
             scor = cor_letra.replace(':cor', '35')
+        if cores == '8':
+            break
         else:
             print(f'{ve}{cores} não é um comando')
             sleep(2)
