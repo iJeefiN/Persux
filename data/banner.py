@@ -30,6 +30,8 @@ def banner():
             snick = nick_banner.replace(':cor', '34')
         elif name == '7':
             snick = nick_banner.replace(':cor', '35')
+        elif name == '8':
+            break
         else:
             print(f'{ve}{cores} não é um comando')
             sleep(2)
