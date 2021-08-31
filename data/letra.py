@@ -31,7 +31,7 @@ def letra():
             scor = cor_letra.replace(':cor', '34')
         elif cores == '7':
             scor = cor_letra.replace(':cor', '35')
-        if cores == '8':
+        elif cores == '8':
             break
         else:
             print(f'{ve}{cores} não é um comando')
