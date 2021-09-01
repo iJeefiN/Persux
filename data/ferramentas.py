@@ -20,11 +20,11 @@ banner_nick = '''echo -e '\e[0;:corm'
 figlet :name
 echo -e '\e[m\\n' '''
 
-user = (open('.usuario', 'r')).readline()
-
+user = open('.usuario', 'r').readline()
 cor_letra = f'''PROMPT_DIRTRIM=2
 PS1='\[\e[0;31m\]┏(\[\e[0;34m\]{user}\[\e[0;31m\]) [\[\e[0;32m\]\w\[\e[0;31m\]] \\n\[\e[0;31m\]┗► \[\e[1;:corm\]'
 '''
+
 
 final ='''if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
         command_not_found_handle() {
