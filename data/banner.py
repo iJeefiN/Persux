@@ -1,17 +1,42 @@
 from data.ferramentas import *
-from data.menu import bannerf, menu_cores
+from data.menu import bannerf, menu_cores, ban_sen
 
 
 def banner():
     while True:
+        rsenha = ''
+        rcor = open('.Cor', 'r')
+        vs = os.path.exists('.Senha')
+        vn = os.path.exists('.Nick')
+        if vs:
+            rsenha = open('.Senha', 'r')
+        if vn:
+            print(ban_sen)
+            ban_exists = str(input(f'{am}//: {br}'))
+            if ban_exists == '1':
+                os.system('clear')
+                pass
+            elif ban_exists == '2':
+                os.system('rm -rf .Nick')
+                os.system('rm -rf bash.bashrc')
+                bash = open('bash.bashrc', 'w')
+                bash.write(f'{inicio}\n' + f'\n{rsenha.read()}\n{rcor.read()}' if vs
+                           else f'{rcor.read()}' + f'{final}')
+                bash.close()
+                print(f'{vd}!Sucess!')
+                sleep(1)
+                break
+            elif ban_exists == '3':
+                os.system('clear')
+                break
+            else:
+                print(f'{ve}{ban_exists} não é um comando')
+                sleep(2)
+                break
         os.system('clear')
         print(bannerf)
         nick = str(input(f'{am}Nick: {br}'))
         nick_banner = banner_nick.replace(':name', f'{nick}')
-        rcor = open('.Cor', 'r')
-        vs = os.path.exists('.Senha')
-        if vs:
-            rsenha = open('.Senha', 'r')
         print(menu_cores)
         name = str(input(f'\n{am}//: {br}'))
         os.chdir('/data/data/com.termux/files/usr/etc')
@@ -33,7 +58,7 @@ def banner():
         elif name == '8':
             break
         else:
-            print(f'{ve}{cores} não é um comando')
+            print(f'{ve}{snick} não é um comando')
             sleep(2)
             os.system('clear')
             break
