@@ -4,7 +4,10 @@ from data.menu import coresf, menu_cores
 
 def letra():
     os.system('clear')
-    rnick = rsenha = open('.usuario', 'r')
+    user = rnick = rsenha = open('.usuario', 'r')
+    cor_letra = f'''PROMPT_DIRTRIM=2
+PS1='\[\e[0;31m\]┏(\[\e[0;34m\]{user.readline()}\[\e[0;31m\]) [\[\e[0;32m\]\w\[\e[0;31m\]] \\n\[\e[0;31m\]┗► \[\e[1;:corm\]'
+'''
     while True:
         os.system('clear')
         vn = os.path.exists('.Nick')
