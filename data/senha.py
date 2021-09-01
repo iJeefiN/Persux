@@ -1,45 +1,73 @@
 from data.ferramentas import *
-from data.menu import senhaf
+from data.menu import bannerf, menu_cores, ban_sen
 
 
-def senha():
-    rnick = ''
-    vn = os.path.exists('.Nick')
-    if vn:
+def banner():
+    while True:
+        rsenha = ''
+        rcor = open('.Cor', 'r')
+        vs = os.path.exists('.Senha')
+        vn = os.path.exists('.Nick')
+        if vs:
+            rsenha = open('.Senha', 'r')
+        if vn:
+            print(ban_sen)
+            ban_exists = str(input(f'{am}//: {br}'))
+            if ban_exists == '1':
+                os.system('clear')
+                pass
+            elif ban_exists == '2':
+                os.system('rm -rf .Nick')
+                os.system('rm -rf bash.bashrc')
+                bash = open('bash.bashrc', 'w')
+                bash.write(f'{inicio}\n' + f'\n{rsenha.read()}\n{rcor.read()}' if vs
+                           else f'{rcor.read()}' + f'{final}')
+                bash.close()
+                print(f'{vd}!Sucess!')
+                sleep(1)
+                break
+            elif ban_exists == '3':
+                os.system('clear')
+                break
+            else:
+                print(f'{ve}{ban_exists} não é um comando')
+                sleep(2)
+                break
+        os.system('clear')
+        print(bannerf)
+        nick = str(input(f'{am}Nick: {br}'))
+        nick_banner = banner_nick.replace(':name', f'{nick}')
+        print(menu_cores)
+        name = str(input(f'\n{am}//: {br}'))
+        os.chdir('/data/data/com.termux/files/usr/etc')
+        os.system('rm -rf bash.bashrc')
+        if name == '1':
+            snick = nick_banner.replace(':cor', '31')
+        elif name == '2':
+            snick = nick_banner.replace(':cor', '33')
+        elif name == '3':
+            snick = nick_banner.replace(':cor', '37')
+        elif name == '4':
+            snick = nick_banner.replace(':cor', '32')
+        elif name == '5':
+            snick = nick_banner.replace(':cor', '36')
+        elif name == '6':
+            snick = nick_banner.replace(':cor', '34')
+        elif name == '7':
+            snick = nick_banner.replace(':cor', '35')
+        elif name == '8':
+            break
+        else:
+            print(f'{ve}{snick} não é um comando')
+            sleep(2)
+            os.system('clear')
+            break
+        nick_file = open('.Nick', 'w')
+        nick_file.write(f'{snick}')
+        nick_file.close()
         rnick = open('.Nick', 'r')
-    rcor = open('.Cor', 'r')
-    print(senhaf)
-    senhaa = str(input(f'{am}Senha: {br}'))
-    senhab = str(input(f'{am}Confirme a senha: {br}'))
-    if senhaa == senhab:
-        ssenha = f'''
-echo 'import os
-from time import sleep
-def menu():
-    try:
-        User = input("Senha: ")
-        if User == "{senhab}":
-         sleep(1)
-         os.system("clear")
-        elif User != "{senhab}":
-         print("Senha Não identificada!")
-         sleep(1)
-         os.system("clear")
-         menu()
-    except:
-         print("Senha Não identificada!")
-         sleep(1)
-         os.system("clear")
-         menu()
-menu()' >> usr.py
-        python usr.py
-rm -rf usr.py'''
-        os.system('rm -rf .Senha')
-        senha_file = open('.Senha', 'w')
-        senha_file.write(ssenha)
-        senha_file.close()
-        rsenha = open('.Senha', 'r')
         bash = open('bash.bashrc', 'w')
-        bash.write(f'{inicio}\n' + f'{rsenha.read()}\n{rnick.read()}\n{rcor.read()}' if vn
-                   else f'{rsenha.read()}\n{rcor.read()}\n{final}')
+        bash.write(f'{inicio}\n' + f'{rsenha.read()}\n{rnick.read()}\n{rcor.read()}'if vs
+                   else f'{rnick.read()}\n{rcor.read()}\n{final}')
         bash.close()
+        break
