@@ -9,3 +9,8 @@
 **+CORES**  
 **+BANNER**  
 **+SENHA**  
+#
+# *Atualização  01/09/21*
+> opção de remover senha
+> opção de remover nick
+> atualização instantânea de nome  
