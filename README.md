@@ -1,9 +1,9 @@
 # [Persux](https://www.youtube.com/channel/UCwmkiKIZHL1wscYHfIINZKw)
-> **ANDROID**
+> - [x]  **ANDROID**
 > - - [ ] **KALI**
 > - - [x] **TERMUX**  
 
-> **LINUX**
+> - [x] **LINUX**
 > - - [ ] **KALI**
 > - - [ ] **UBUNTU**
 
