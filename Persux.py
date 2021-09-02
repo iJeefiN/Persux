@@ -31,25 +31,25 @@ try:
   {am}[ 5 ] {br}-{cy} Sair
 {ve}┗━━━━━━━━━━━━━━━━━┛
 ''')
-        menu = int(input(f'{am}//: {br}'))
+        menu = str(input(f'{am}//: {br}'))
         if usr == False:
             print(f'{cy}~Lursy: {vd}Boa escolha!')
             sleep(1)
             usr = True
-        if menu == 1:
+        if menu == '1':
             from data.letra import letra
             letra()
-        elif menu == 2:
+        elif menu == '2':
             from data.banner import banner
             banner()
-        elif menu == 3:
+        elif menu == '3':
             from data.senha import senha
             senha()
-        elif menu == 4:
+        elif menu == '4':
             from data.nome import nome_letra
             nome_letra()
             from data.ferramentas import *
-        elif menu == 5:
+        elif menu == '5':
             print(f'\n{vd}Saindo...')
             sleep(1)
             os.system('clear')
