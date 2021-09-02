@@ -1,4 +1,5 @@
 # [Persux](https://www.youtube.com/channel/UCwmkiKIZHL1wscYHfIINZKw)
+
 > **ANDROID**
 > - - [ ] **KALI**
 > - - [x] **TERMUX**  
@@ -6,7 +7,7 @@
 > **LINUX**
 > - - [ ] **KALI**
 > - - [ ] **UBUNTU**
-
+#
 
 #### *COMANDOS*  
  - `pkg i python -y && pkg i git -y`
