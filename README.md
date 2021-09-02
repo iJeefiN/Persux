@@ -1,25 +1,25 @@
 # [Persux](https://www.youtube.com/channel/UCwmkiKIZHL1wscYHfIINZKw)
-> - [x] **ANDROID**
+> **ANDROID**
 > - - [ ] **KALI**
 > - - [x] **TERMUX**  
 
-> - [ ] **LINUX**
+> **LINUX**
 > - - [ ] **KALI**
 > - - [ ] **UBUNTU**
 
 
-### *COMANDOS*  
+#### *COMANDOS*  
  - `pkg i python -y && pkg i git -y`
  - `git clone https://github.com/Lursy/Persux`
  - `cd Persux`
- - `python Persux.py`
+ - `python Persux.py`  
 
-### *FUNÇÕES*  
+#### *FUNÇÕES*  
  - *Alterar cor da letra*
  - *Adicionar banner*
  - *Adicionar senha*
 
-### *ATUALIZAÇÃO*  
+#### *ATUALIZAÇÃO*  
 > *01/09/21*
 > - opção de remover senha
 > - opção de remover nick
