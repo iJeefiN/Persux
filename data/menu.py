@@ -1,4 +1,5 @@
-from data.ferramentas import am, br, cy, az, rx, ve, vd
+from data.ferramentas import am, br, cy, az, rx, ve, vd, figlet
+
 
 
 #Menus
@@ -13,11 +14,24 @@ menu_cores = f'''{ve}┏━━━━━━━━━━━━━━━━━━�
   {am}[ 8 ] {br}- Voltar{ve}
 ┗━━━━━━━━━━━━━━━━━━━┛
 '''
+
+styles = f'''{ve}┏━━━━━━━━━━━━━━━━━━━┓
+  {am}[ 1 ] {br}-{cy} normal
+  {am}[ 2 ] {br}-{cy} poison 
+  {am}[ 3 ] {br}-{cy} lean
+  {am}[ 4 ] {br}-{cy} isometric
+  {am}[ 5 ] {br}-{cy} doh
+  {am}[ 6 ] {br}-{cy} larry3d
+  {am}[ 7 ] {br}-{cy} block
+  {am}[ 8 ] {br}-{cy} alligator{ve}
+┗━━━━━━━━━━━━━━━━━━━┛'''
+
 ban_sen = f'''{ve}┏━━━━━━━━━━━━━━━━━┓
   {am}[ 1 ] {br}-{cy} alterar
   {am}[ 2 ] {br}-{cy} remover
   {am}[ 3 ] {br}-{cy} voltar
 {ve}┗━━━━━━━━━━━━━━━━━┛'''
+
 
 menu_nome = f'''{ve}┏━━━━━━━━━━━━━━━━━━━━━━┓
   {am}[ 1 ] {br}-{cy} alterar nome
@@ -25,27 +39,7 @@ menu_nome = f'''{ve}┏━━━━━━━━━━━━━━━━━━━
 {ve}┗━━━━━━━━━━━━━━━━━━━━━━┛'''
 
 #Figlet
-persuxf = f'''{rx} ____
-|  _ \ ___ _ __ ___ _   ___  __
-| |_) / _ \\ '__/ __| | | \ \/ /
-|  __/  __/ |  \__ \ |_| |>  <
-|_|   \___|_|  |___/\__,_/_/\_\\
-'''
-coresf = f'''{az}  ____
- / ___|___  _ __ ___  ___
-| |   / _ \| '__/ _ \/ __|
-| |__| (_) | | |  __/\__ \\
- \____\___/|_|  \___||___/
-'''
-bannerf = f'''{ve} ____
-| __ )  __ _ _ __  _ __   ___ _ __
-|  _ \ / _` | '_ \| '_ \ / _ \ '__|
-| |_) | (_| | | | | | | |  __/ |
-|____/ \__,_|_| |_|_| |_|\___|_|
-'''
-senhaf = f'''{vd}  ____             _
-/ ___|  ___ _ __ | |__   __ _
-\___ \ / _ \\ '_ \| '_ \ / _` |
- ___) |  __/ | | | | | | (_| |
-|____/ \___|_| |_|_| |_|\__,_|
-'''
+persuxf = f"{rx}{figlet.renderText('Persux')}"
+coresf = f"{az}{figlet.renderText('Styles')}"
+bannerf = f"{ve}{figlet.renderText('Banner')}"
+senhaf = f"{vd}{figlet.renderText('Senha')}"
