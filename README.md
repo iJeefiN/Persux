@@ -27,7 +27,7 @@
 > - atualização instantânea de nome  
 
 > *03/09/21*  
-> **Styles para banner**
+> > **Styles para banner**
 > > - poison
 > > - lean
 > > - block
