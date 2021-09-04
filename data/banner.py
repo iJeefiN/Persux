@@ -1,5 +1,5 @@
 from data.ferramentas import *
-from data.menu import bannerf, menu_cores, ban_sen
+from data.menu import bannerf, menu_cores, ban_sen, styles
 
 
 def banner():
@@ -35,8 +35,40 @@ def banner():
                 break
         os.system('clear')
         print(bannerf)
-        nick = str(input(f'{am}Nick: {br}'))
+        name = nick = str(input(f'{am}Nick: {br}'))
+        os.system('clear')
+        print(f"{rx}{figlet.renderText('Styles')}")
+        print(styles)
+        int_styles = str(input(f'{am}//: {br}'))
+        if int_styles == '1':
+            banner_nick = f'''echo -e '\e[0;:corm'
+figlet {nick}
+echo -e '\e[m\\n' '''
+        elif int_styles == '2':
+            name = poison.renderText(f'{nick}')
+        elif int_styles == '3':
+            name = lean.renderText(f'{nick}')
+        elif int_styles == '4':
+            name = isometric.renderText(f'{nick}')
+        elif int_styles == '5':
+            name = doh.renderText(f'{nick}')
+        elif int_styles == '6':
+            name = larry3d.renderText(f'{nick}')
+        elif int_styles == '7':
+            name = block.renderText(f'{nick}')
+        elif int_styles == '8':
+            name = alligator.renderText(f'{nick}')
+        else:
+            print(f'{ve}Comando não identificado!')
+            break
+        if int_styles != '1':
+            banner_nick = f'''echo -e '\e[0;:corm'
+echo """{name}"""
+echo -e '\e[m\\n' '''
+        os.system('clear')
         nick_banner = banner_nick.replace(':name', f'{nick}')
+        os.system('clear')
+        print(f"{az}{figlet.renderText('Cores')}")
         print(menu_cores)
         name = str(input(f'\n{am}//: {br}'))
         os.chdir('/data/data/com.termux/files/usr/etc')
