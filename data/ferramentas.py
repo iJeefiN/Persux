@@ -1,5 +1,12 @@
 import os
 from time import sleep
+try:
+    from pyfiglet import Figlet
+except ModuleNotFoundError:
+    print('Instalando...')
+    os.system('python3 -m pip install --upgrade pip')
+    os.system('pip install pyfiglet')
+    from pyfiglet import Figlet
 
 
 ve = '\033[1;31m'  # Vermelho
@@ -16,9 +23,16 @@ shopt -s histverify
 export HISTCONTROL=ignoreboth
 '''
 
-banner_nick = '''echo -e '\e[0;:corm'
-figlet :name
-echo -e '\e[m\\n' '''
+
+alligator = Figlet(font='alligator')
+poison = Figlet(font='poison')
+lean = Figlet(font='lean')
+isometric = Figlet(font='isometric1')
+doh = Figlet(font='doh')
+larry3d = Figlet(font='larry3d')
+block = Figlet(font='block')
+figlet = Figlet()
+
 
 user = open('.usuario', 'r').readline()
 cor_letra = f'''PROMPT_DIRTRIM=2
