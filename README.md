@@ -26,7 +26,7 @@
 > - opção de remover nick
 > - atualização instantânea de nome  
 
-> *03/09/21*
+> *03/09/21*  
 > **Styles para banner**
 > - poison
 > - lean
