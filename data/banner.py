@@ -49,14 +49,8 @@ echo -e '\e[m\\n' '''
         elif int_styles == '3':
             name = lean.renderText(f'{nick}')
         elif int_styles == '4':
-            name = isometric.renderText(f'{nick}')
-        elif int_styles == '5':
-            name = doh.renderText(f'{nick}')
-        elif int_styles == '6':
-            name = larry3d.renderText(f'{nick}')
-        elif int_styles == '7':
             name = block.renderText(f'{nick}')
-        elif int_styles == '8':
+        elif int_styles == '5':
             name = alligator.renderText(f'{nick}')
         else:
             print(f'{ve}Comando não identificado!')
