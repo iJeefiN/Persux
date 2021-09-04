@@ -19,11 +19,8 @@ styles = f'''{ve}┏━━━━━━━━━━━━━━━━━━━┓
   {am}[ 1 ] {br}-{cy} normal
   {am}[ 2 ] {br}-{cy} poison 
   {am}[ 3 ] {br}-{cy} lean
-  {am}[ 4 ] {br}-{cy} isometric
-  {am}[ 5 ] {br}-{cy} doh
-  {am}[ 6 ] {br}-{cy} larry3d
-  {am}[ 7 ] {br}-{cy} block
-  {am}[ 8 ] {br}-{cy} alligator{ve}
+  {am}[ 4 ] {br}-{cy} block
+  {am}[ 5 ] {br}-{cy} alligator{ve}
 ┗━━━━━━━━━━━━━━━━━━━┛'''
 
 ban_sen = f'''{ve}┏━━━━━━━━━━━━━━━━━┓
