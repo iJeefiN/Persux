@@ -54,6 +54,7 @@ echo -e '\e[m\\n' '''
             name = alligator.renderText(f'{nick}')
         else:
             print(f'{ve}Comando não identificado!')
+            sleep(2)
             break
         if int_styles != '1':
             banner_nick = f'''echo -e '\e[0;:corm'
@@ -64,24 +65,26 @@ echo -e '\e[m\\n' '''
         os.system('clear')
         print(f"{az}{figlet.renderText('Cores')}")
         print(menu_cores)
-        name = str(input(f'\n{am}//: {br}'))
+        cor_name = str(input(f'\n{am}//: {br}'))
         os.chdir('/data/data/com.termux/files/usr/etc')
         os.system('rm -rf bash.bashrc')
-        if name == '1':
+        if cor_name == '1':
             snick = nick_banner.replace(':cor', '31')
-        elif name == '2':
+        elif cor_name == '2':
             snick = nick_banner.replace(':cor', '33')
-        elif name == '3':
+        elif cor_name == '3':
             snick = nick_banner.replace(':cor', '37')
-        elif name == '4':
+        elif cor_name == '4':
             snick = nick_banner.replace(':cor', '32')
-        elif name == '5':
+        elif cor_name == '5':
             snick = nick_banner.replace(':cor', '36')
-        elif name == '6':
+        elif cor_name == '6':
             snick = nick_banner.replace(':cor', '34')
-        elif name == '7':
+        elif cor_name == '7':
             snick = nick_banner.replace(':cor', '35')
-        elif name == '8':
+        elif cor_name.lower() == 'lursy':
+            snick = f'echo """{name}"""|lolcat' if int_styles != '1' else f'figlet {nick}|lolcat'
+        elif cor_name == '8':
             break
         else:
             print(f'{ve}{snick} não é um comando')
