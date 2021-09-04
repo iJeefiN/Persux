@@ -28,7 +28,7 @@
 
 > *03/09/21*  
 > **Styles para banner**
-> - poison
-> - lean
-> - block
-> - alligator
+> > - poison
+> > - lean
+> > - block
+> > - alligator
