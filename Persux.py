@@ -32,7 +32,7 @@ try:
 {ve}┗━━━━━━━━━━━━━━━━━┛
 ''')
         menu = str(input(f'{am}//: {br}'))
-        if usr == False:
+        if usr == False and menu != '5':
             print(f'{cy}~Lursy: {vd}Boa escolha!')
             sleep(1)
             usr = True
