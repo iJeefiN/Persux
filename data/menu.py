@@ -37,6 +37,6 @@ menu_nome = f'''{ve}┏━━━━━━━━━━━━━━━━━━━
 
 #Figlet
 persuxf = f"{rx}{figlet.renderText('Persux')}"
-coresf = f"{az}{figlet.renderText('Styles')}"
+coresf = f"{az}{figlet.renderText('Cores')}"
 bannerf = f"{ve}{figlet.renderText('Banner')}"
 senhaf = f"{vd}{figlet.renderText('Senha')}"
