@@ -16,6 +16,12 @@ def install():
         os.system('pip install lolcat &>/dev/null')
         os.system('clear')
         print(f'\033[0;32minstalando...')
+        try:
+            from pyfiglet import Figlet
+        except ModuleNotFoundError:
+            print('Instalando...')
+            os.system('python3 -m pip install --upgrade pip &>/dev/null')
+            os.system('pip install pyfiglet &>/dev/null')
         os.system('clear')
         os.chdir('/data/data/com.termux/files/usr/etc/')
         os.system('rm -rf .Cor')
