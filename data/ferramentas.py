@@ -1,12 +1,6 @@
 import os
 from time import sleep
-try:
-    from pyfiglet import Figlet
-except ModuleNotFoundError:
-    print('Instalando...')
-    os.system('python3 -m pip install --upgrade pip')
-    os.system('pip install pyfiglet')
-    from pyfiglet import Figlet
+from pyfiglet import Figlet
 
 
 ve = '\033[1;31m'  # Vermelho
@@ -27,9 +21,6 @@ export HISTCONTROL=ignoreboth
 alligator = Figlet(font='alligator')
 poison = Figlet(font='poison')
 lean = Figlet(font='lean')
-isometric = Figlet(font='isometric1')
-doh = Figlet(font='doh')
-larry3d = Figlet(font='larry3d')
 block = Figlet(font='block')
 figlet = Figlet()
 
