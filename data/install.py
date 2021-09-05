@@ -19,7 +19,6 @@ def install():
         try:
             from pyfiglet import Figlet
         except ModuleNotFoundError:
-            print('Instalando...')
             os.system('python3 -m pip install --upgrade pip &>/dev/null')
             os.system('pip install pyfiglet &>/dev/null')
         os.system('clear')
