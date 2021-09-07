@@ -31,4 +31,8 @@
 > > - poison
 > > - lean
 > > - block
-> > - alligator
+> > - alligator  
+
+> *07/09/21*
+> - resolução de bugs
+> - +2 styles de banner adicionados
