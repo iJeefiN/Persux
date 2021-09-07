@@ -1,5 +1,5 @@
-from Persux.data.ferramentas import figlet
-from Persux.data.cores_persux import *
+from data.ferramentas import figlet
+from data.cores_persux import *
 
 
 # Menus
