@@ -1,15 +1,15 @@
 from data.ferramentas import *
+from data.cores_persux import *
 from data.menu import coresf, menu_cores
 
 
 def letra():
     os.system('clear')
     user = rnick = rsenha = open('.usuario', 'r')
-    cor_letra = f'''PROMPT_DIRTRIM=2
-PS1='\[\e[0;31m\]┏(\[\e[0;34m\]{user.readline()}\[\e[0;31m\]) [\[\e[0;32m\]\w\[\e[0;31m\]] \\n\[\e[0;31m\]┗► \[\e[1;:corm\]'
-'''
+    cor_letra = f"PS1='\[\e[0;31m\]┏(\[\e[0;34m\]{user.readline()}\[\e[0;31m\])" \
+                f" [\[\e[0;32m\]\w\[\e[0;31m\]] \\n\[\e[0;31m\]┗► \[\e[1;:corm\]'"
     while True:
-        os.system('clear')
+        clear()
         vn = os.path.exists('.Nick')
         vs = os.path.exists('.Senha')
         if vs:
@@ -18,6 +18,7 @@ PS1='\[\e[0;31m\]┏(\[\e[0;34m\]{user.readline()}\[\e[0;31m\]) [\[\e[0;32m\]\w\
             rnick = open('.Nick', 'r')
         print(coresf)
         print(menu_cores)
+        print(f'{vd}[i] {br}cor da letra do terminal\n')
         cores = str(input(f'\n{am}//: {br}'))
         os.system('rm -rf bash.bashrc')
         if cores == '1':
@@ -39,7 +40,7 @@ PS1='\[\e[0;31m\]┏(\[\e[0;34m\]{user.readline()}\[\e[0;31m\]) [\[\e[0;32m\]\w\
         else:
             print(f'{ve}{cores} não é um comando')
             sleep(2)
-            os.system('clear')
+            clear()
             break
         os.system('rm -rf .Cor')
         cor_file = open('.Cor', 'w')
@@ -47,8 +48,8 @@ PS1='\[\e[0;31m\]┏(\[\e[0;34m\]{user.readline()}\[\e[0;31m\]) [\[\e[0;32m\]\w\
         cor_file.close()
         rcor = open('.Cor', 'r')
         bash = open('bash.bashrc', 'w')
-        bash.write((f'{inicio}\n') + (f'{rsenha.read()}\n{rnick.read()}'
-                   if vs and vn else f'{rsenha.read()}' if not vn
-                   else f'{rnick.read()}') + (f'\n{rcor.read()}{final}'))
+        bash.write((f'{inicio}\n{rsenha.read()}\n{rnick.read()}\n{rcor.read()}\n{final}' if vs and vn
+                    else f'{inicio}\n{rsenha.read()}\n{rcor.read()}\n{final}' if not vn
+                    else f'{inicio}\n{rnick.read()}\n{rcor.read()}\n{final}'))
         bash.close()
         break
