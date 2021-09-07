@@ -3,9 +3,6 @@ from data.cores_persux import *
 
 
 def install():
-    os.system('clear')
-    print(f'{vd}verificando atualizações')
-    os.system('git pull &>/dev/null')
     os.chdir('/data/data/com.termux/files/usr/etc/')
     inst = os.path.exists('.usuario')
     if not inst:
