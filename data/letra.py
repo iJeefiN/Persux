@@ -20,7 +20,6 @@ def letra():
         print(menu_cores)
         print(f'{vd}[i] {br}cor da letra do terminal\n')
         cores = str(input(f'\n{am}//: {br}'))
-        os.system('rm -rf bash.bashrc')
         if cores == '1':
             scor = cor_letra.replace(':cor', '31')
         elif cores == '2':
@@ -42,6 +41,7 @@ def letra():
             sleep(2)
             clear()
             break
+        os.system('rm -rf bash.bashrc')
         os.system('rm -rf .Cor')
         cor_file = open('.Cor', 'w')
         cor_file.write(f'{scor}')
