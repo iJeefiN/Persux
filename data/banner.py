@@ -1,5 +1,5 @@
-from data.ferramentas import *
-from data.menu import *
+from Persux.data.ferramentas import *
+from Persux.data.menu import *
 
 
 def banner():
@@ -75,8 +75,6 @@ echo -e '\e[m\\n\\n' '''
         print(menu_cores)
         print(f'{vd}[i] {br}cor do banner\n')
         cor_name = str(input(f'\n{am}//: {br}'))
-        os.chdir('/data/data/com.termux/files/usr/etc')
-        os.system('rm -rf bash.bashrc')
         if cor_name == '1':
             snick = cat_banner.replace(':cor', '31')
         elif cor_name == '2':
@@ -100,6 +98,7 @@ echo -e '\e[m\\n\\n' '''
             sleep(2)
             clear()
             break
+        os.system('rm -rf bash.bashrc')
         nick_file = open('.Nick', 'w')
         nick_file.write(f'{snick}')
         nick_file.close()
