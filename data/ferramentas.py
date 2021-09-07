@@ -3,25 +3,19 @@ from time import sleep
 from pyfiglet import Figlet
 
 
-ve = '\033[1;31m'  # Vermelho
-vd = '\033[1;32m'  # Verde
-am = '\033[1;33m'  # Amarelo
-az = '\033[1;34m'  # Azul
-br = '\033[1;37m'  # Branco
-cy = '\033[1;36m'  # Ciano
-rx = '\033[0;35m'  # Roxo
-
-
 inicio = '''shopt -s histappend
 shopt -s histverify
 export HISTCONTROL=ignoreboth
-'''
+
+PROMPT_DIRTRIM=2'''
 
 
 alligator = Figlet(font='alligator')
 poison = Figlet(font='poison')
 lean = Figlet(font='lean')
 block = Figlet(font='block')
+cosmic = Figlet(font='cosmic')
+rozzo = Figlet(font='rozzo')
 figlet = Figlet()
 
 
@@ -37,3 +31,7 @@ final ='''if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-fou
         }
 fi
 '''
+
+
+def clear():
+    os.system('clear')
