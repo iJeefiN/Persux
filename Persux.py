@@ -2,19 +2,20 @@ from data.install import *
 os.chdir('/data/data/com.termux/files/usr/etc/')
 usr = os.path.exists('.usuario')
 install()
-from time import sleep
-from data.menu import *
 
 
 try:
     while True:
-        os.system('clear')
-        if usr == False:
+        from time import sleep
+        from data.menu import *
+        from data.ferramentas import clear
+        clear()
+        if not usr:
             print(f'{cy}~Lursy: {vd}Olá...')
             sleep(1)
             print('        É sua primeira vez por aqui?')
             sleep(3.5)
-            os.system('clear')
+            clear()
             print(f'{cy}~Lursy: {vd}Bem... ')
             sleep(1)
             print('        Seja bem vindo!!')
@@ -32,7 +33,7 @@ try:
 {ve}┗━━━━━━━━━━━━━━━━━┛
 ''')
         menu = str(input(f'{am}//: {br}'))
-        if usr == False and menu != '5':
+        if usr == False:
             print(f'{cy}~Lursy: {vd}Boa escolha!')
             sleep(1)
             usr = True
@@ -52,7 +53,7 @@ try:
         elif menu == '5':
             print(f'\n{vd}Saindo...')
             sleep(1)
-            os.system('clear')
+            clear()
             break
         else:
             print(f'{ve}Comando não reconhecido')
@@ -60,4 +61,4 @@ try:
 except KeyboardInterrupt:
     print(f'\n{vd}Saindo...')
     sleep(1)
-    os.system('clear')
+    clear()
