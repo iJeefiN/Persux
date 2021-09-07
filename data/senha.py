@@ -1,4 +1,5 @@
 from data.ferramentas import *
+from data.cores_persux import *
 from data.menu import senhaf, ban_sen
 
 
@@ -33,7 +34,7 @@ def senha():
                 print(f'{ve}{sen_exists} não é um comando')
                 sleep(2)
                 break
-        os.system('clear')
+        clear()
         print(senhaf)
         senhaa = str(input(f'{am}Senha: {br}'))
         senhab = str(input(f'{am}Confirme a senha: {br}'))
@@ -43,8 +44,6 @@ echo 'import os
 from time import sleep
 def menu():
     try:
-        print("\\033[0;37m")
-        os.system("figlet Block")
         User = input("\\033[0;31mSenha: \\033[0;36m")
         if User == "{senhab}":
             sleep(1)
@@ -67,7 +66,7 @@ rm -rf usr.py'''
             senha_file.close()
             rsenha = open('.Senha', 'r')
             bash = open('bash.bashrc', 'w')
-            bash.write(f'{inicio}\n' + f'{rsenha.read()}\n{rnick.read()}\n{rcor.read()}' if vn
-                       else f'{rsenha.read()}\n{rcor.read()}\n{final}')
+            bash.write(f'{inicio}\n{rsenha.read()}\n{rnick.read()}\n{rcor.read()}\n{final}' if vn
+                       else f'{inicio}\n{rsenha.read()}\n{rcor.read()}\n{final}')
             bash.close()
             break
