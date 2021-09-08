@@ -11,30 +11,30 @@ try:
         from data.ferramentas import clear
         clear()
         if not usr:
-            print(f'{cy}~Lursy: {vd}Olá...')
+            print(f'{cy}~Lursy: {vd}Olá tudo bem ?...')
             sleep(1)
             print('        É sua primeira vez por aqui?')
             sleep(3.5)
             clear()
-            print(f'{cy}~Lursy: {vd}Bem... ')
+            print(f'{cy}~Lursy: {vd}Bem vamos lá ... ')
             sleep(1)
             print('        Seja bem vindo!!')
             sleep(2)
-            print('        Esse é o menu, fique a vontade :D')
+            print('        Esse é o menu, fique a vontade ok :D')
             sleep(1.4)
-        print(persuxf)
+        print(--JeehVQV--)
         user = (open('.usuario', 'r')).readline()
         print(f'''{ve}┏━━━━━━━━━━━━━━━━━┓
-  {am}[ 1 ] {br}-{cy} letra
-  {am}[ 2 ] {br}-{cy} banner
-  {am}[ 3 ] {br}-{cy} senha
+  {am}[ 1 ] {br}-{cy} escolha uma letra
+  {am}[ 2 ] {br}-{cy} escolha um banner
+  {am}[ 3 ] {br}-{cy} escolha uma senha
   {am}[ 4 ] {br}-{cy} {user}
   {am}[ 5 ] {br}-{cy} Sair
 {ve}┗━━━━━━━━━━━━━━━━━┛
 ''')
         menu = str(input(f'{am}//: {br}'))
         if usr == False:
-            print(f'{cy}~Lursy: {vd}Boa escolha!')
+            print(f'{cy}~Lursy: {vd}Boa escolha garoto(a)!')
             sleep(1)
             usr = True
         if menu == '1':
@@ -51,7 +51,7 @@ try:
             nome_letra()
             from data.ferramentas import *
         elif menu == '5':
-            print(f'\n{vd}Saindo...')
+            print(f'\n{vd}Saindo aqui , fuii ...')
             sleep(1)
             clear()
             break
